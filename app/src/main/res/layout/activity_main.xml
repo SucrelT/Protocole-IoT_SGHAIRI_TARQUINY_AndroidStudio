@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#E3F2FD">
+
+    <!-- Titre de l'application -->
+
+    <!-- Statut BLE -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp"
+        android:text="Contrôle de Température BLE"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connecté. Recherche des services..."
+        android:textSize="16sp"
+        android:paddingBottom="8dp" />
+
+    <!-- Température actuelle -->
+    <TextView
+        android:id="@+id/textViewTemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Température actuelle : -- °C"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp" />
+
+    <!-- Image au centre de l'écran -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="287dp"
+        android:layout_height="269dp"
+        android:layout_gravity="center"
+        android:contentDescription="Icône de température"
+        android:padding="8dp"
+        android:src="@drawable/maison1" />
+
+    <!-- Champ pour entrer la température désirée -->
+    <EditText
+        android:id="@+id/editTextDesiredTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Température désirée (°C)"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Bouton pour valider la température désirée -->
+    <Button
+        android:id="@+id/buttonSetTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Valider Température"
+        android:layout_marginTop="16dp"
+        android:padding="12dp" />
+</LinearLayout>
